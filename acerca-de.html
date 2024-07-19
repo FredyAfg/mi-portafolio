@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fredy Afg - Inicio</title>
+    <title>Fredy Afg - Acerca de Mí</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -51,6 +51,25 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .profile img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .profile h2 {
+            margin-top: 0;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #4CAF50;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin: 0.5rem 0.5rem 0 0;
+        }
     </style>
 </head>
 <body>
@@ -66,20 +85,23 @@
         </nav>
     </header>
     <div class="container">
-        <section id="inicio" class="section">
-            <h1>Inicio</h1>
-            <div class="project-item">
-                <h2>Proyecto 1: Predicción de la Demanda de Café</h2>
-                <p>Descripción breve del proyecto...</p>
-            </div>
-            <div class="project-item">
-                <h2>Proyecto 2: Análisis de Datos de Producción</h2>
-                <p>Descripción breve del proyecto...</p>
-            </div>
-            <!-- Agrega más proyectos aquí -->
+        <section id="acerca-de" class="section profile">
+            <h1>Acerca de Mí</h1>
+            <img src="ruta/a/tu/foto.jpg" alt="Foto de Perfil">
+            <h2>Fredy Afg</h2>
+            <p>Ingeniero Industrial, Científico de Datos y Analista de Datos.</p>
+            <p>Soy un ingeniero industrial con excelentes habilidades en el análisis de datos. En mi proyecto de grado, realicé un proyecto de investigación con inteligencia artificial aplicada a modelos predictivos para predecir la demanda futura del café colombiano.</p>
+            <section class="skills">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Análisis de Datos</li>
+                    <li>Modelos Predictivos</li>
+                    <li>Inteligencia Artificial</li>
+                    <li>Optimización de Procesos</li>
+                    <li>Gestión de Proyectos</li>
+                </ul>
+            </section>
         </section>
     </div>
 </body>
 </html>
-
-
