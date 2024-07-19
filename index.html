@@ -3,10 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
+    <title>Fredy Afg - Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .intro, .project, .skills {
+            background: white;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro h1 {
+            margin-top: 0;
+        }
+        .project h2, .skills h2 {
+            margin-bottom: 1rem;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #4CAF50;
+            color: white;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin: 0.5rem 0.5rem 0 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a Mi Portafolio</h1>
-    <p>Este es un sitio donde muestro mis proyectos y habilidades.</p>
+    <header class="header">
+        <h1>Fredy Afg - Ingeniero Industrial</h1>
+    </header>
+    <div class="container">
+        <section class="intro">
+            <h1>Sobre Mí</h1>
+            <p>Soy un ingeniero industrial con excelentes habilidades en el análisis de datos. En mi proyecto de grado, realicé un proyecto de investigación con inteligencia artificial aplicada a modelos predictivos para predecir la demanda futura del café colombiano.</p>
+        </section>
+        <section class="project">
+            <h2>Proyecto de Grado</h2>
+            <p>Mi proyecto de grado consistió en desarrollar un modelo predictivo utilizando inteligencia artificial para predecir la demanda futura del café colombiano. Este proyecto no solo demostró mis habilidades en el análisis de datos, sino también mi capacidad para aplicar técnicas avanzadas de IA en problemas del mundo real.</p>
+        </section>
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Análisis de Datos</li>
+                <li>Modelos Predictivos</li>
+                <li>Inteligencia Artificial</li>
+                <li>Optimización de Procesos</li>
+                <li>Gestión de Proyectos</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
