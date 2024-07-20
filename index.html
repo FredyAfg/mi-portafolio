@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fredy Afg - Inicio</title>
+    <title>Fredy Afg - Portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -13,7 +18,7 @@
             background-color: #f4f4f9;
         }
         .header {
-            background-color: #4CAF50;
+            background-color: #4c90af;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -51,34 +56,192 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .footer {
+            background-color: #4c90af;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        pre {
+            background-color: #f4f4f9;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .code {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            margin-top: 0;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #4c90af;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .contact-form button:hover {
+            background-color: #454ba0;
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>Fredy Afg - Ingeniero Industrial</h1>
+        <h1></h1>
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
                 <li><a href="acerca-de.html">Acerca de</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+               
             </ul>
         </nav>
     </header>
     <div class="container">
         <section id="inicio" class="section">
-            <h1>Inicio</h1>
+            <h1>Proyectos de Ciencia de Datos</h1>
+
+            <!-- Proyecto 1: Predicción de Demanda con SVR -->
             <div class="project-item">
-                <h2>Proyecto 1: Predicción de la Demanda de Café</h2>
-                <p>Descripción breve del proyecto...</p>
+                <h2>Proyecto 1: Predicción de Demanda con SVR</h2>
+                <p>En este proyecto, utilizamos máquinas de vectores de soporte (SVR) para predecir la demanda de café en diferentes escenarios:</p>
+                <ul>
+                    <li><strong>Demanda de Exportación:</strong> El modelo SVR alcanzó un rendimiento del 80% en la fase de prueba y 90% en el entrenamiento.</li>
+                    <li><strong>Demanda de Producción:</strong> El modelo SVR mostró un rendimiento del 20% en la fase de prueba y 85% en el entrenamiento.</li>
+                </ul>
+                <h3>Resultados</h3>
+                <canvas id="svrResults" width="400" height="200"></canvas>
+                <script>
+                    var ctx = document.getElementById('svrResults').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Demanda de Exportación (Prueba)', 'Demanda de Exportación (Entrenamiento)', 'Demanda de Producción (Prueba)', 'Demanda de Producción (Entrenamiento)'],
+                            datasets: [{
+                                label: 'Rendimiento (%)',
+                                data: [80, 90, 20, 85],
+                                backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(153, 102, 255, 0.2)'],
+                                borderColor: ['rgba(75, 192, 192, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(153, 102, 255, 1)'],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
             </div>
+
+            <!-- Proyecto 2: Predicción de Demanda con Redes Neuronales LSTM -->
             <div class="project-item">
-                <h2>Proyecto 2: Análisis de Datos de Producción</h2>
-                <p>Descripción breve del proyecto...</p>
+                <h2>Proyecto 2: Predicción de Demanda con Redes Neuronales LSTM</h2>
+                <p>Para la demanda de producción de café, se emplearon redes neuronales LSTM:</p>
+                <ul>
+                    <li><strong>Demanda de Producción:</strong> El modelo LSTM alcanzó un rendimiento del 75% en R².</li>
+                    <li><strong>Demanda de Exportación:</strong> El rendimiento fue del 10% en R².</li>
+                </ul>
+                <p>Los datos utilizados para el entrenamiento incluyeron información histórica desde 2014 y se consideraron 17 variables para la demanda de producción y 20 para la demanda de exportación.</p>
+                <h3>Resultados</h3>
+                <canvas id="lstmResults" width="400" height="200"></canvas>
+                <script>
+                    var ctx = document.getElementById('lstmResults').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Demanda de Producción (LSTM)', 'Demanda de Exportación (LSTM)'],
+                            datasets: [{
+                                label: 'R² (%)',
+                                data: [75, 10],
+                                backgroundColor: ['rgba(54, 162, 235, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                                borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)'],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
             </div>
-            <!-- Agrega más proyectos aquí -->
+
+            <!-- Proyecto 3: Análisis Adicional (Datos Aleatorios) -->
+            <div class="project-item">
+                <h2>Proyecto 3: Análisis Adicional</h2>
+                <p>Este proyecto implica el análisis de datos adicionales para descubrir patrones y tendencias:</p>
+                <ul>
+                    <li><strong>Objetivo:</strong> Identificar patrones relevantes en los datos de producción y exportación de café.</li>
+                    <li><strong>Metodología:</strong> Análisis exploratorio de datos y visualización de resultados.</li>
+                </ul>
+                <h3>Resultados</h3>
+                <canvas id="additionalAnalysis" width="400" height="200"></canvas>
+                <script>
+                    var ctx = document.getElementById('additionalAnalysis').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+                            datasets: [{
+                                label: 'Tendencias de Producción',
+                                data: [10, 20, 15, 25, 30],
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
         </section>
+
     </div>
+    <footer class="footer">
+        <p>Conéctate conmigo en 
+            <a href="https://www.linkedin.com/in/fredy-alonso-fernandez-gelvez-b84b28b7/" target="_blank"><i class="fab fa-linkedin"></i></a> 
+            <a href="https://www.facebook.com/profile.php?id=100064306300188&mibextid=ZbWKwL/" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+            <a href="https://www.instagram.com/fredy_22fg/" target="_blank"><i class="fab fa-instagram"></i></a> 
+            <a href="https://wa.me/3166349072/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+    </footer>
 </body>
 </html>
 

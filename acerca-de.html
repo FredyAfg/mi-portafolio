@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fredy Afg - Acerca de Mí</title>
+    <title>Fredy Fernández - Acerca de Mí</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #e1e1ec;
         }
         .header {
-            background-color: #4CAF50;
+            background-color: #1e3a8a; /* Azul oscuro */
             color: white;
             padding: 1rem 0;
             text-align: center;
             position: relative;
         }
         .nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 1rem;
+            position: relative;
+            margin: 0 auto;
+            max-width: 1200px;
         }
         .nav ul {
             list-style-type: none;
@@ -35,7 +35,7 @@
             margin-left: 1rem;
         }
         .nav a {
-            color: white;
+            color: rgba(255, 255, 255, 0.74);
             text-decoration: none;
             font-weight: bold;
         }
@@ -51,6 +51,9 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .profile {
+            text-align: center;
+        }
         .profile img {
             width: 150px;
             border-radius: 50%;
@@ -61,9 +64,10 @@
         .skills ul {
             list-style-type: none;
             padding: 0;
+            text-align: center;
         }
         .skills li {
-            background: #4CAF50;
+            background: #1e40af; /* Azul medio */
             color: white;
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -74,23 +78,22 @@
 </head>
 <body>
     <header class="header">
-        <h1>Fredy Afg - Ingeniero Industrial</h1>
         <nav class="nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
                 <li><a href="acerca-de.html">Acerca de</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <section id="acerca-de" class="section profile">
-            <h1>Acerca de Mí</h1>
-            <img src="ruta/a/tu/foto.jpg" alt="Foto de Perfil">
-            <h2>Fredy Afg</h2>
-            <p>Ingeniero Industrial, Científico de Datos y Analista de Datos.</p>
-            <p>Soy un ingeniero industrial con excelentes habilidades en el análisis de datos. En mi proyecto de grado, realicé un proyecto de investigación con inteligencia artificial aplicada a modelos predictivos para predecir la demanda futura del café colombiano.</p>
+            <h2>Fredy A. Fernández G.</h2>
+            <img src="fredy-modified.png" alt="Foto de Perfil">
+            <p><strong>Ingeniero Industrial, Científico de Datos y Analista de Datos.</strong></p>
+            <p>Soy un ingeniero industrial con excelentes habilidades en el análisis de datos. Durante mi formación, aprendí conceptos fundamentales en bases de datos, programación y Excel, así como en investigación de operaciones. Participé activamente en semilleros de investigación y tuve la oportunidad de presentar mi proyecto de predicción de demanda de café colombiano.</p>
+            <p>En mi proyecto de grado, utilicé <strong>máquinas de vectores (SVR)</strong> y <strong>redes neuronales LSTM</strong> para predecir la demanda de producción y exportación de café colombiano. El modelo SVR mostró un rendimiento del 80% en la fase de prueba para la demanda de exportación y 20% para la demanda de producción. En la fase de entrenamiento, los resultados fueron del 90% y 85%, respectivamente. Los modelos LSTM fueron más efectivos para la demanda de producción, alcanzando un rendimiento del 75% en R², mientras que el modelo de exportación obtuvo un 10%. Estos resultados indicaron que el uso de modelos adecuados es crucial para obtener predicciones precisas.</p>
+            <p>En 2023, mi proyecto fue evaluado con 90 puntos de 100, lo que me permitió presentar en un evento nacional el 8 de octubre en la Universidad de Cartagena, obteniendo 91 puntos. Aunque no me permitió participar a nivel internacional, la experiencia fue valiosa para mi desarrollo profesional.</p>
+            <p>He sido una persona trabajadora, comprometida y con experiencia en el campo. A pesar de las dificultades, he logrado avanzar en mi carrera, trabajando para financiar mis estudios y así continuar mi camino en la ciencia de datos y la ingeniería industrial. Mi objetivo es combinar estos conocimientos para aportar beneficios significativos a las empresas y a mi desarrollo profesional.</p>
             <section class="skills">
                 <h2>Habilidades</h2>
                 <ul>
@@ -105,3 +108,6 @@
     </div>
 </body>
 </html>
+
+
+
